@@ -1,4 +1,12 @@
 Rails.application.routes.draw do
+  get 'home/index'
+
+  get 'home/game'
+
+  get 'home/tinyurl'
+
+  get 'home/golly'
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
