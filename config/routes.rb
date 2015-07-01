@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'games/index'
+
   get 'tinyurls/index'
 
   root 'home#index'
