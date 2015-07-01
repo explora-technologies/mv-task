@@ -1,11 +1,11 @@
 <div class="row card card-panel " style="padding-top:10%">
-<%= form_tag("tinyurl", {:method => :post, :remote => true,:id=>"tnyurl",:class=>"col s12" }) do %>
+<%= form_tag("tinyurl", {:method => :post, :remote => false,:id=>"tnyurl",:class=>"col s12" }) do %>
 	<div class="row">
 		<div class="input-field col s12">
-		    <input id="last_name" type="text" class="validate" style="font-size:30px;color:red;height:50px">
-		    <label for="last_name">URL </label>
+		    <%= text_field_tag :url %>
+		    <label for="url">URL </label>
 		</div>
-		<center><a class="waves-effect waves-light btn-large">Create a tiny url</a></center>
+		<center><%= submit_tag 'Create a tiny url' %></center>
 	</div>
 <% end %>
 </div>
