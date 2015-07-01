@@ -1,8 +1,9 @@
-
 <h2 class="header" >Created tinyurls</h2>
+<% @urls.each do |url| %>
  <ul class="collapsible popout" data-collapsible="accordion">
     <li>
-      <div class="collapsible-header">tinyurl</div>
-      <div class="collapsible-body"><p>Main url</p></div>
+      <div class="collapsible-header teal" style="color:white"><%= url.user_url %></div>
+      <div class="collapsible-body"><p><%= url.tiny_url %></p></div>
     </li>
 </ul>
+<% end %>
