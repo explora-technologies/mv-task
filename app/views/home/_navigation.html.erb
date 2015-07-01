@@ -1,18 +1,18 @@
 <nav>
     <div class="nav-wrapper teal">
       <a href="#!" class="brand-logo">MV</a>
-      <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+      <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">>></i></a>
       <ul class="right hide-on-med-and-down">
-        <li><a href="/">Home</a></li>
-        <li><a href="#">2048</a></li>
-        <li><a href="#">TinyURL</a></li>
-        <li><a href="#">Golly</a></li>
+        <li><%= link_to "Home", root_path %></li>
+        <li><%= link_to "2048", root_path %></li>
+        <li><%= link_to "TinyURL", tinyurls_index_path %></li>
+        <li><%= link_to "Golly", root_path %></li>
       </ul>
       <ul class="side-nav" id="mobile-demo">
-         <li><a href="/">Home</a></li>
-        <li><a href="#">2048</a></li>
-        <li><a href="#">TinyURL</a></li>
-        <li><a href="#">Golly</a></li>
+        <li><%= link_to "Home", root_path %></li>
+        <li><%= link_to "2048", root_path %></li>
+        <li><%= link_to "TinyURL", tinyurls_index_path %></li>
+        <li><%= link_to "Golly", root_path %></li>
       </ul>
     </div>
 </nav>
