@@ -79,7 +79,6 @@
  $( document ).ready(function() {
         var game = new Array(4);
         arrayinit();
-        randomappend()
 		// array initialize here (start)
 		function arrayinit()
 		{
@@ -93,6 +92,7 @@
 					
 				}
 			}
+			randomappend()
 			
 		}
 		// array initialize here (end)
@@ -119,8 +119,31 @@
 					}
 				}
 			}
+			dataappending()
 		}
 		// function for randome text generation (end)
+
+		function dataappending()
+		{
+			var array = [];
+			for(var i=0;i<4;i++)
+			{
+				for(var j=0;j<4;j++)
+				{
+					if(game[i][j] == '')
+					{
+						array.push(i + '-' + j);
+					}	
+				}
+			}
+			var str = array[Math.floor(Math.random()*array.length)]
+			var res = str.split("-");
+			var i =res[0];
+			var j =res[1];
+			game[i][j] = 2;
+			$('#'+i+j).html("<span style='background-color:red'>"+ game[i][j]+"</span>");
+
+		}
 
 	});
 </script>
