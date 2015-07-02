@@ -151,7 +151,8 @@
 
 		});
 		$('#rightmove').click(function() {
-
+			moveright();
+			dataappending();
 		});
 		$('#upmove').click(function() {
 			moveup()
@@ -216,6 +217,33 @@
 				}
 				k = k+1;
 			}
+		}
+		function moveright()
+		{
+			var k = 0;
+			while(k < 3)
+			{
+				for(var i=0;i<=3;i++)
+				{
+					for(var j=3;j>=1;j--)
+					{
+						if(game[i][j] === '')
+						{
+							game[i][j] = game[i][j-1];	
+							game[i][j-1] = ''
+							$('#'+i+''+j).html("<span style='background-color:#"+(995510+(game[i][j]*5))+";border:0px solid black;'>"+game[i][j]+"</span>");
+							$('#'+i+''+(j-1)).html('')
+
+						}
+						else
+						{
+							
+						}
+						
+					}
+				}
+				k = k+1;
+			}	
 		}
 
 	});
