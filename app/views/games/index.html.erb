@@ -69,3 +69,25 @@
 </div>
 </div>
 <center><a class="waves-effect waves-light btn-large">Start a new game</a></center>
+<script type="text/javascript">
+ $( document ).ready(function() {
+        var game = new Array(4);
+        arrayinit();
+		
+		function arrayinit()
+		{
+			var counter = 0;
+			for( var i=0;i<4;i++)
+			{
+				game[i] = new Array(4);
+				for(var j=0;j<4;j++)
+				{
+					game[i][j] = '';
+					
+				}
+			}
+			
+		}
+
+	});
+</script>
