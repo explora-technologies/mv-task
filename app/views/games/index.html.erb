@@ -95,10 +95,21 @@
 		{
 			var array = [2,4,2,4,2,2,];
 			var data_set = 0;
-			if(!data_set)
+			for(var i=0;i<4;i++)
 			{
-				data_set = 1;
-				array[Math.floor(Math.random()*array.length)];
+				for(var j=0;j<4;j++)
+				{
+					if(!data_set)
+					{
+						data_set = 1;
+						if(game[i][j] == '')
+						{
+							game[i][j] = array[Math.floor(Math.random()*array.length)];
+							
+						}
+						
+					}
+				}
 			}
 		}
 		// function for randome text generation (end)
