@@ -145,6 +145,51 @@
 			$('#'+i+j).html("<span style='background-color:red'>"+ game[i][j]+"</span>");
 
 		}
+		$('#leftmove').click(function() {
+
+
+		});
+		$('#rightmove').click(function() {
+
+		});
+		$('#upmove').click(function() {
+			moveup()
+			dataappending()
+
+		});
+		$('#downmove').click(function() {
+
+		});
+		function moveup()
+		{
+			
+			var k = 0;
+			 while(k < 3)
+			{
+
+				for(var i=0;i<=2;i++)
+				{
+					for(var j=0;j<=3;j++)
+					{
+						if(game[i][j] == '')
+						{
+							game[i][j] = game[i+1][j]
+							game[i+1][j] = '' 
+							$('#'+i+''+j).html("<span style='background-color:#"+(995510+(game[i][j]*5))+";border:0px solid black;'>"+game[i][j]+"</span>");	
+							$('#'+(i+1)+j).html('')
+									
+						}
+						else
+						{
+							
+						}
+						
+					}
+				}
+				k = k+1;
+
+			 }
+		}
 
 	});
 </script>
