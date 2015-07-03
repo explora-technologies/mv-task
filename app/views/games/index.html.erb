@@ -90,6 +90,21 @@
  $( document ).ready(function() {
         var game = new Array(4);
         arrayinit();
+        document.onkeydown = function(e) {
+    switch (e.keyCode) {
+        case 37:
+            $('#leftmove').click();
+            break;
+        case 38:
+            $('#upmove').click();
+            break;
+        case 39:
+            $('#rightmove').click();
+            break;
+        case 40:
+            $('#downmove').click();
+            break;
+    }
 		// array initialize here (start)
 		function arrayinit()
 		{
