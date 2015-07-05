@@ -1,9 +1,9 @@
-<h2 class="header" >Created tinyurls</h2>
+<h3 style="color:grey">Created tinyurls</h3>
 <% @urls.reverse.each do |url| %>
  <ul class="collapsible popout" data-collapsible="accordion">
     <li>
-      <div class="collapsible-header teal" style="color:white"><%= url.tiny_url %></div>
-      <div class="collapsible-body"><p><%= url.user_url %></p></div>
+      <div class="collapsible-header " style="color:white;background-color:#00AF5F"><b style="color:black">Tiny URL :</b><b> <%= url.tiny_url %></b></div>
+      <div class="collapsible-body"><p><b style="color:black">User URL : </b><%= url.user_url %></p></div>
     </li>
 </ul>
 <% end %>

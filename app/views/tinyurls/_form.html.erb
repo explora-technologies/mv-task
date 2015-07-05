@@ -2,10 +2,13 @@
 <%= form_tag("tinyurl", {:method => :post, :remote => false,:id=>"tnyurl",:class=>"col s12" }) do %>
 	<div class="row">
 		<div class="input-field col s12">
-		    <%= text_field_tag :url %>
+		    <%= text_field_tag :url ,"",:style=>"color:red;font-size:26px",:required => true,:class=>" lighten-4 required" %>
 		    <label for="url">URL </label>
 		</div>
-		<center><%= submit_tag 'Create a tiny url' %></center>
+		<center>
+			<button class="waves-effect waves-light btn-large red" type="submit" name="action">Create a tiny url
+  </button>
+</center>
 	</div>
 <% end %>
 </div>
