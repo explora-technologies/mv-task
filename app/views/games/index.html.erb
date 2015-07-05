@@ -61,7 +61,7 @@
 </div>
 <div class="col s6" style="color:white">
 	<div class="row">
-	  <div class="game-grid no-border"></div>
+	  <div class="game-grid no-border tt"></div>
 	  <div class="game-grid no-border"></div>
 	  <div class="game-grid no-border"></div>
 	  <div class="game-grid no-border"></div>
@@ -89,7 +89,9 @@
 <script type="text/javascript">
  $( document ).ready(function() {
         var game = new Array(4);
+        score = 0;
         arrayinit();
+
         document.onkeydown = function(e) 
         {
 	    	switch (e.keyCode) 
@@ -111,6 +113,7 @@
 		// array initialize here (start)
 		function arrayinit()
 		{
+			$('.tt').html("<span style='background-color:#009688;border:0px solid black;'>Score:0</span>")
 			var counter = 0;
 			for( var i=0;i<4;i++)
 			{
@@ -122,6 +125,7 @@
 				}
 			}
 			randomappend()
+
 			
 		}
 		// array initialize here (end)
@@ -218,6 +222,8 @@
 							{
 								if(k > 1 ){
 								game[i][j] = game[i][j] *2;
+								score = score + game[i][j]								
+								$('.tt').html("<span style='background-color:#009688;border:0px solid black;'>Score:"+score+"</span>");
 								$('#'+i+''+j).html("<span style='background-color:#"+(995510+(game[i][j]*5))+";border:0px solid black;'>"+game[i][j]+"</span>");
 								game[i+1][j] = '';
 								$('#'+(i+1)+j).html('')
@@ -259,6 +265,8 @@
 							{
 								if(k > 1 ){
 								game[i][j] = game[i][j] *2;
+								score = score + game[i][j]
+								$('.tt').html("<span style='background-color:#009688;border:0px solid black;'>Score:"+score+"</span>");
 								$('#'+i+''+j).html("<span style='background-color:#"+(995510+(game[i][j]*5))+";border:0px solid black;'>"+game[i][j]+"</span>");
 								game[i][j+1] = '';
 								$('#'+i+''+(j+1)).html('');
@@ -300,6 +308,8 @@
 							{
 								if(k > 1 ){
 								game[i][j] = game[i][j] *2;
+								score = score + game[i][j]
+								$('.tt').html("<span style='background-color:#009688;border:0px solid black;'>Score:"+score+"</span>");
 								$('#'+i+''+j).html("<span style='background-color:#"+(995510+(game[i][j]*5))+";border:0px solid black;'>"+game[i][j]+"</span>");
 								game[i][j-1] = ''
 								$('#'+i+''+(j-1)).html('')
@@ -340,6 +350,8 @@
 							{
 								if(k > 1 ){
 								game[i][j] = game[i][j] *2;
+								score = score + game[i][j]
+								$('.tt').html("<span style='background-color:#009688;border:0px solid black;'>Score:"+score+"</span>");
 								$('#'+i+''+j).html("<span style='background-color:#"+(995510+(game[i][j]*5))+";border:0px solid black;'>"+game[i][j]+"</span>");
 								game[i-1][j] = ''
 								$('#'+(i-1)+''+j).html('')
