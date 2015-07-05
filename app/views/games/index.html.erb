@@ -216,10 +216,12 @@
 						{
 							if(game[i][j] == game[i+1][j])
 							{
+								if(k > 1 ){
 								game[i][j] = game[i][j] *2;
 								$('#'+i+''+j).html("<span style='background-color:#"+(995510+(game[i][j]*5))+";border:0px solid black;'>"+game[i][j]+"</span>");
 								game[i+1][j] = '';
 								$('#'+(i+1)+j).html('')
+								}
 
 							}
 							
@@ -255,10 +257,12 @@
 						{
 							if(game[i][j] == game[i][j+1])
 							{
+								if(k > 1 ){
 								game[i][j] = game[i][j] *2;
 								$('#'+i+''+j).html("<span style='background-color:#"+(995510+(game[i][j]*5))+";border:0px solid black;'>"+game[i][j]+"</span>");
 								game[i][j+1] = '';
 								$('#'+i+''+(j+1)).html('');
+								}
 
 							}
 							
@@ -294,10 +298,12 @@
 						{
 							if(game[i][j] == game[i][j-1])
 							{
+								if(k > 1 ){
 								game[i][j] = game[i][j] *2;
 								$('#'+i+''+j).html("<span style='background-color:#"+(995510+(game[i][j]*5))+";border:0px solid black;'>"+game[i][j]+"</span>");
 								game[i][j-1] = ''
 								$('#'+i+''+(j-1)).html('')
+							}
 
 							}
 							
@@ -332,10 +338,12 @@
 						{
 							if(game[i][j] == game[i-1][j])
 							{
+								if(k > 1 ){
 								game[i][j] = game[i][j] *2;
 								$('#'+i+''+j).html("<span style='background-color:#"+(995510+(game[i][j]*5))+";border:0px solid black;'>"+game[i][j]+"</span>");
 								game[i-1][j] = ''
 								$('#'+(i-1)+''+j).html('')
+								}
 
 							}
 							
