@@ -1,28 +1,10 @@
 == README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Projects includes:
 
-Things you may want to cover:
+* 2048 Game : You can  use keyboard arrow keys to play game / Arrow buttons on the page .
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+* Tiny url :  convert any url to tiny url. You can navigate to the user url by pasting converted tiny url on the address bar
 
 
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+Twitter : @errakeshpd
